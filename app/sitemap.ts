@@ -1,10 +1,28 @@
 import type { MetadataRoute } from "next";
 
+const siteUrl = "https://securesight.smartbiz365.site";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://securesight-cctv.vercel.app";
+  const lastModified = new Date();
+
   return [
-    { url: base, lastModified: new Date() },
-    { url: base + "/privacy", lastModified: new Date() },
-    { url: base + "/terms", lastModified: new Date() }
+    {
+      url: siteUrl,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 1
+    },
+    {
+      url: `${siteUrl}/privacy`,
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.3
+    },
+    {
+      url: `${siteUrl}/terms`,
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.3
+    }
   ];
 }
