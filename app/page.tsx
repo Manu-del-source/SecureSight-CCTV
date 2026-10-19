@@ -1,3 +1,5 @@
+"use client";
+
 import { ArrowRight, BadgeCheck, Camera, CheckCircle2, ChevronRight, Clock3, Eye, House, KeyRound, MapPin, MessageCircle, Network, ShieldCheck, Siren, Video, Wifi } from "lucide-react";
 
 const wa = "https://wa.me/254700000000?text=" + encodeURIComponent("Hello SecureSight CCTV, I would like a CCTV/security system quotation.");
