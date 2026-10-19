@@ -2,7 +2,7 @@
 
 import { ArrowRight, BadgeCheck, Camera, CheckCircle2, ChevronRight, Clock3, Eye, House, KeyRound, MapPin, MessageCircle, Network, ShieldCheck, Wifi } from "lucide-react";
 
-const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\\D/g, "") ?? "";
+const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "") ?? "";
 const wa = whatsappNumber
   ? "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent("Hello SecureSight CCTV, I would like a CCTV/security system quotation.")
   : "#quote";
