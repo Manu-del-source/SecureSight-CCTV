@@ -1,18 +1,15 @@
 "use client";
 
-import { ArrowRight, BadgeCheck, Camera, CheckCircle2, ChevronRight, Clock3, Eye, House, KeyRound, MapPin, MessageCircle, Network, ShieldCheck, Siren, Video, Wifi } from "lucide-react";
+import { ArrowRight, BadgeCheck, Camera, CheckCircle2, ChevronRight, Clock3, Eye, House, KeyRound, MapPin, MessageCircle, Network, ShieldCheck, Wifi } from "lucide-react";
 
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\\D/g, "") ?? "";
 const wa = whatsappNumber
   ? "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent("Hello SecureSight CCTV, I would like a CCTV/security system quotation.")
   : "#quote";
 const services = [
-  { icon: Camera, title: "CCTV Camera Installation", text: "Professional camera placement for homes, shops, offices, schools and commercial sites." },
-  { icon: Video, title: "IP & HD Camera Systems", text: "Choose a suitable camera setup with clear footage, night vision and remote viewing options." },
-  { icon: Eye, title: "Remote Monitoring Setup", text: "View supported cameras securely from your phone or computer, at home or away." },
-  { icon: ShieldCheck, title: "Access Control", text: "Manage entry with compatible biometric, card, keypad and door access solutions." },
-  { icon: Siren, title: "Alarm & Perimeter Security", text: "Explore intrusion detection, alarm systems and perimeter protection for your property." },
-  { icon: Network, title: "Maintenance & Upgrades", text: "Get help with camera faults, cabling, storage, system upgrades and troubleshooting." }
+  { icon: Camera, title: "CCTV installation", text: "Camera placement, cabling and setup designed around your property's layout, entry points and coverage needs." },
+  { icon: Eye, title: "Remote monitoring", text: "Explore secure viewing options to check supported cameras from your phone or computer while away." },
+  { icon: Network, title: "Security upgrades", text: "Improve an existing setup with help for camera faults, cabling, storage, maintenance and system expansion." }
 ];
 export default function Home() {
   return <main>
@@ -23,8 +20,8 @@ export default function Home() {
     </div></header>
     <section className="hero"><div className="wrap hero-grid">
       <div><div className="eyebrow">Security solutions across Kenya</div>
-        <h1>See more.<br/><span>Worry less.</span><br/>Stay secure.</h1>
-        <p className="lead">CCTV and access systems planned around your property, your priorities and your budget. From a home entrance to a complete commercial site, start with a clearer security plan.</p>
+        <h1>See more.<br/><span>Worry less.</span></h1>
+        <p className="lead">Reliable CCTV installation and smart security systems for Kenyan homes, shops, offices and commercial spaces. Start with a practical plan shaped around your property, priorities and budget.</p>
         <div className="actions"><a className="btn" href="#quote">Plan your security <ArrowRight size={17}/></a><a className="btn btn-outline" href={wa} target={whatsappNumber ? "_blank" : undefined} rel={whatsappNumber ? "noreferrer" : undefined}><MessageCircle size={17}/> {whatsappNumber ? "Chat on WhatsApp" : "Contact us"}</a></div>
         <div className="proof"><span><CheckCircle2 size={15} style={{display:"inline",color:"var(--accent)",verticalAlign:"middle"}}/> Residential & business</span><span><MapPin size={15} style={{display:"inline",color:"var(--accent)",verticalAlign:"middle"}}/> Kenya-wide enquiries</span></div>
       </div>
@@ -32,13 +29,15 @@ export default function Home() {
         <div className="visual-label"><span><b>SECURESIGHT / SYSTEM 01</b><br/><span style={{color:"var(--muted)"}}>Coverage starts with a plan</span></span><span className="live">● READY TO PLAN</span></div>
       </div>
     </div></section>
-    <section className="section"><div className="wrap"><div className="section-head"><div className="eyebrow">What we do</div><h2>A smarter way to secure your space.</h2><p>Start with the problem you need to solve. We can help you explore suitable equipment, coverage and installation options.</p></div>
+    <section className="trust-strip" aria-label="Service coverage and property types"><div className="wrap trust-inner"><div className="trust-intro"><b>PROTECTION THAT FITS YOUR SPACE</b><span>Thoughtful setup. Clean installation. Confidence after dark.</span></div><div className="trust-item"><b>01</b><span>Homes & apartments</span></div><div className="trust-item"><b>02</b><span>Shops & workplaces</span></div><div className="trust-item"><b>03</b><span>Commercial sites</span></div></div></section>
+    <section className="section"><div className="wrap"><div className="section-head"><div className="eyebrow">What we do</div><h2>A smarter way to secure what matters.</h2><p>Start with the problem you need to solve. We can help you explore suitable equipment, coverage and installation options.</p></div>
       <div className="grid3">{services.map(({icon:Icon,title,text})=><article className="service" key={title}><div className="service-icon"><Icon size={23}/></div><h3>{title}</h3><p>{text}</p><a className="learn" href="#quote">Ask about this service <ChevronRight size={15}/></a></article>)}</div>
     </div></section>
     <section className="section section-alt" id="about"><div className="wrap split"><div><div className="eyebrow">A clear plan, not guesswork</div><h2 style={{fontSize:"clamp(32px,4vw,45px)",lineHeight:1.1}}>The right setup starts with understanding your space.</h2><p className="lead">A useful security system is more than a camera on a wall. Coverage, lighting, recording time, connectivity and installation quality all matter.</p><div className="feature-list"><div className="feature"><BadgeCheck className="check"/><span><b>Needs-first recommendations</b><br/>Discuss your property, priorities and budget before choosing equipment.</span></div><div className="feature"><Wifi className="check"/><span><b>Practical viewing options</b><br/>Understand remote viewing, network needs and recording storage.</span></div><div className="feature"><Clock3 className="check"/><span><b>Support beyond installation</b><br/>Ask about maintenance, troubleshooting and future expansion.</span></div><div className="feature"><House className="check"/><span><b>Homes and businesses</b><br/>Solutions for residences, retail, offices, institutions and other sites.</span></div></div></div>
       <div className="quote-panel"><div className="service-icon"><KeyRound size={24}/></div><h3 style={{fontSize:25,letterSpacing:"-.7px"}}>Your property. Your priorities.</h3><p style={{color:"var(--muted)",lineHeight:1.8}}>Not sure what you need? Tell us the type of property and the areas you want to secure. Start with an enquiry and get guidance on the next steps.</p><a className="btn" style={{marginTop:10}} href="#quote">Plan my security setup <ArrowRight size={16}/></a></div>
     </div></section>
     <section className="section" id="process"><div className="wrap"><div className="section-head"><div className="eyebrow">Simple process</div><h2>Three steps. One clearer plan.</h2><p>Know what happens next before committing to an installation.</p></div><div className="steps"><article className="step"><b>STEP 01</b><h3>Tell us about your site</h3><p>Share your location, property type, priorities and preferred way to be contacted.</p></article><article className="step"><b>STEP 02</b><h3>Discuss your options</h3><p>Review possible equipment, coverage, recording and installation requirements.</p></article><article className="step"><b>STEP 03</b><h3>Confirm the quotation</h3><p>Agree on the scope, price and schedule before work begins.</p></article></div></div></section>
+    <section className="contact-cta"><div className="wrap contact-cta-inner"><div><div className="cta-kicker">LET’S MAKE YOUR SPACE MORE SECURE</div><h2>Ready to see your space differently?</h2><p>Tell us what you need. We’ll help you plan a practical CCTV solution.</p></div><a className="btn cta-dark-btn" href="#quote">Request a quote <ArrowRight size={17}/></a></div></section>
     <section className="section section-alt" id="quote"><div className="wrap quote-grid"><div><div className="eyebrow">Let's talk security</div><h2 style={{fontSize:"clamp(34px,4vw,48px)",lineHeight:1.08}}>Request a CCTV quotation.</h2><p className="lead">Share a few details and prepare an enquiry you can send to our team through WhatsApp.</p><div className="feature-list"><div className="feature"><CheckCircle2 className="check"/><span>No payment is taken on this website.</span></div><div className="feature"><CheckCircle2 className="check"/><span>Final prices depend on the agreed equipment and site requirements.</span></div><div className="feature"><CheckCircle2 className="check"/><span>Kenya-wide enquiries welcome; availability and travel are confirmed individually.</span></div></div></div>
       <QuoteForm wa={wa}/></div></section>
     <footer className="footer"><div className="wrap footer-inner"><a className="brand" href="#"><span className="brandmark"><ShieldCheck size={21}/></span><span>SecureSight <span style={{color:"var(--accent)"}}>CCTV</span></span></a><span>Security solutions across Kenya · Preview website</span><div className="footer-links"><a href="#services">Services</a><a href="#quote">Request a quote</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div><span>© {new Date().getFullYear()} SecureSight CCTV. All rights reserved.</span></div></footer>
